@@ -1,35 +1,42 @@
-import { IonApp, IonRouterOutlet } from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
-import { Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeableBrowser } from "@ionic-native/themeable-browser";
 
-import Home from "./pages/Home";
-
-/* Core CSS required for Ionic components to work properly */
-import "@ionic/react/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
-import "@ionic/react/css/normalize.css";
-import "@ionic/react/css/structure.css";
-import "@ionic/react/css/typography.css";
+import routes from "./routes";
+import BottomNav from "./components/BottomNav/BottomNav";
+import SearchBar from "./components/SearchBar/SearchBar";
+import NotFound from "./pages/NotFound/NotFound";
 
 import "./assets/style/tailwind.css";
 import "./assets/style/global.css";
 
 const App: React.FC = () => {
   const openURL = () => {
-    ThemeableBrowser.create("https://www.facebook.com/", "_blank", {});
+    ThemeableBrowser.create("https://movies4us.me/", "_blank", {});
   };
   return (
-    <IonApp>
-      <IonRouterOutlet>
-        <IonReactRouter>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </IonReactRouter>
-      </IonRouterOutlet>
-    </IonApp>
+    <div className="w-screen h-screen bg-white text-gray-800 overflow-hidden">
+      <Router>
+        <div className="w-full h-16 px-4 py-2">
+          <SearchBar />
+        </div>
+        <div className="w-full h-[calc(100%-8rem)] overflow-x-hidden overflow-y-auto">
+          <Switch>
+            {routes.map((route, index) => (
+              <Route
+                key={[route.path, index].join("-")}
+                exact={route.exact}
+                path={route.path}
+                component={route.component}
+              />
+            ))}
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </div>
+        <div className="w-full h-16">
+          <BottomNav />
+        </div>
+      </Router>
+    </div>
   );
 };
 
