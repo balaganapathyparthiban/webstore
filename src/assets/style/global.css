@@ -1,0 +1,9 @@
+* {
+    outline: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    user-select: none;
+    overflow: hidden;
+}
