@@ -1,12 +1,12 @@
-import React from "react";
-import Applications from "./pages/Applications/Applications";
-import CONST from "./utils/constants";
+import React from 'react'
+import Applications from './pages/Applications/Applications'
+import CONST from './utils/constants'
 
 type Routes = {
-  path: string;
-  exact?: boolean;
-  component: React.FC;
-};
+  path: string
+  exact?: boolean
+  component: React.FC
+}
 
 const routes: Routes[] = [
   {
@@ -30,6 +30,6 @@ const routes: Routes[] = [
     path: CONST.ROUTE_SETTINGS,
     component: Applications,
   },
-];
+]
 
-export default routes;
+export default routes

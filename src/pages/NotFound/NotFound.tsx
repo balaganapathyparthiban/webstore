@@ -3,7 +3,7 @@ const NotFound: React.FC = () => {
     <div>
       <p>Not Found</p>
     </div>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

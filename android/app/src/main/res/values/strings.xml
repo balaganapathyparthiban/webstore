@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">webstore</string>
+    <string name="title_activity_main">webstore</string>
+    <string name="package_name">com.bginnovate.webstore</string>
+    <string name="custom_url_scheme">com.bginnovate.webstore</string>
+</resources>

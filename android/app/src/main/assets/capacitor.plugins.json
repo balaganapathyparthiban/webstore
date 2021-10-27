@@ -1,0 +1,6 @@
+[
+	{
+		"pkg": "capacitor-plugin-inappbrowser",
+		"classpath": "com.bginnovate.plugin.inappbrowser.InAppBrowser"
+	}
+]

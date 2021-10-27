@@ -3,51 +3,51 @@ import {
   AiFillAppstore,
   AiOutlineHeart,
   AiFillHeart,
-} from "react-icons/ai";
+} from 'react-icons/ai'
 import {
   MdOutlineGames,
   MdGames,
   MdOutlineVpnLock,
   MdVpnLock,
-} from "react-icons/md";
-import { RiSettings3Line, RiSettings3Fill } from "react-icons/ri";
-import CONST from "../../../utils/constants";
-import { Menus } from "./types";
+} from 'react-icons/md'
+import { RiSettings3Line, RiSettings3Fill } from 'react-icons/ri'
+import CONST from '../../../utils/constants'
+import { Menus } from './types'
 
 export const menus: Menus[] = [
   {
-    name: "Apps",
+    name: 'Apps',
     iconFill: AiFillAppstore,
     iconOutline: AiOutlineAppstore,
-    color: "text-blue-400",
+    color: 'text-blue-400',
     route: CONST.ROUTE_APPS,
   },
   {
-    name: "Games",
+    name: 'Games',
     iconFill: MdGames,
     iconOutline: MdOutlineGames,
-    color: "text-green-400",
+    color: 'text-green-400',
     route: CONST.ROUTE_GAMES,
   },
   {
-    name: "Favorites",
+    name: 'Favorites',
     iconFill: AiFillHeart,
     iconOutline: AiOutlineHeart,
-    color: "text-red-400",
+    color: 'text-red-400',
     route: CONST.ROUTE_FAVORITES,
   },
   {
-    name: "Vpn",
+    name: 'Vpn',
     iconFill: MdVpnLock,
     iconOutline: MdOutlineVpnLock,
-    color: "text-emerald-400",
+    color: 'text-emerald-400',
     route: CONST.ROUTE_VPN,
   },
   {
-    name: "Settings",
+    name: 'Settings',
     iconFill: RiSettings3Fill,
     iconOutline: RiSettings3Line,
-    color: "text-lime-400",
+    color: 'text-lime-400',
     route: CONST.ROUTE_SETTINGS,
   },
-];
+]
